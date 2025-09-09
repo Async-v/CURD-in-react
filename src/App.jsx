@@ -10,13 +10,10 @@ const App = () => {
 
 
   return (
-    <Fragment>
+    <div className="w-screen h-screen flex bg-gray-700 p-10">
       <Create todos={todos} settodos={settodos} />
-      <br />
-      <hr />
-      <br />
       <Read todos={todos} settodos={settodos} />
-    </Fragment>
+    </div>
   );
 };
 

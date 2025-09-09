@@ -24,20 +24,14 @@ const Create = (props) => {
 
         settitle("");
 
-        const buttoncss = {
-            color: "white",
-            padding: "5px 10px",
-            backgroundColor: "transparent",
-            border: "1px solid white"
-        }
-
     }
 
     return (
-        <>
-            <h1>Create Tasks</h1>
-            <form onSubmit={submitHandler}>
+        <div className="w-[50%] flex flex-col gap-5 h-full text-center p-5 bg-amber-100">
+            <h1 className="text-3xl font-bold tracking-widest border-2 p-4 uppercase">Create Tasks</h1>
+            <form className="w-full h-full border-2 p-4" onSubmit={submitHandler}>
                 <input
+                    className="w-full h-[3rem] border-1 rounded-lg p-4 font-semibold"
                     onChange={(e) => settitle(e.target.value)}
                     value={title}
                     type="text"
@@ -45,9 +39,9 @@ const Create = (props) => {
                 />
                 <br />
                 <br />
-                <button>Create Todo</button>
+                <button className="w-[50%] p-3 rounded-lg border-1 bg-amber-200 font-semibold">Create Todo</button>
             </form>
-        </>
+        </div>
     );
 };
 
