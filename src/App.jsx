@@ -10,7 +10,7 @@ const App = () => {
 
 
   return (
-    <div className="w-screen h-screen flex bg-gray-700 p-10">
+    <div className="w-screen h-screen flex bg-gray-800 p-10">
       <Create todos={todos} settodos={settodos} />
       <Read todos={todos} settodos={settodos} />
     </div>
