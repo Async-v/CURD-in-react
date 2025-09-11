@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const Create = (props) => {
     const todos = props.todos;
@@ -19,6 +20,10 @@ const Create = (props) => {
         const newtodos = [...todos]
         newtodos.push(data)
         settodos(newtodos)
+
+        toast.success("Todo Created!", {
+            theme: "dark"
+        })
 
         reset()
     };

@@ -1,5 +1,6 @@
 // import style from "./Read.module.css"
 import { nanoid } from "nanoid";
+import { toast } from "react-toastify";
 
 const Read = (props) => {
     
@@ -9,6 +10,9 @@ const Read = (props) => {
     const deleteHandler = (id) => {
         const filtertodos = todos.filter((todo)=> todo.id != id)
         settodos(filtertodos)
+        toast.error("Todo Deleted!", {
+            theme: "dark"
+        })
     }
 
     const rendertodos = todos.map(todo => {
