@@ -1,4 +1,5 @@
 // import style from "./Read.module.css"
+import { nanoid } from "nanoid";
 
 const Read = (props) => {
     
@@ -11,7 +12,7 @@ const Read = (props) => {
     }
 
     const rendertodos = todos.map(todo => {
-        return <div className= "w-full flex py-2 px-5 border-1 align-middle rounded-lg">
+        return <div key={nanoid()} className= "w-full flex py-2 px-5 border-1 align-middle rounded-lg">
             <li className="w-full py-1 h-fit text-left font-semibold" key={todo.id}>{todo.title}</li>
             <button className="bg-red-400 border-red-500 rounded-lg px-5 font-semibold py-1 border-1" onClick={() => deleteHandler(todo.id)}>Delete</button>
         </div>
