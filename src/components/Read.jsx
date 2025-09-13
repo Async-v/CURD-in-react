@@ -3,7 +3,6 @@ import { nanoid } from "nanoid";
 import { toast } from "react-toastify";
 
 const Read = (props) => {
-    
     const todos = props.todos
     const settodos = props.settodos
 
