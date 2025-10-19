@@ -1,10 +1,13 @@
 // import style from "./Read.module.css"
 import { nanoid } from "nanoid";
+import { useContext } from "react";
 import { toast } from "react-toastify";
+import { todocontext } from '../wrapper'
 
-const Read = (props) => {
-    const todos = props.todos
-    const settodos = props.settodos
+const Read = () => {
+
+    let [todos, settodos] = useContext(todocontext);
+    
 
     const deleteHandler = (id) => {
         const filtertodos = todos.filter((todo)=> todo.id != id)
